@@ -1,1 +1,1 @@
-# "I created a classic Snake game using HTML, CSS, and JavaScript.
+# I created a classic Snake game using HTML, CSS, and JavaScript.
