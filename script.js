@@ -4,10 +4,9 @@ const gameOverSound = new Audio('photos/over.wav');
 const moveSound = new Audio('photos/move.mp3');
 const musicSound = new Audio('photos/bgMusic.mp3');
 
-musicSound.play();
 
 let score = 0;
-let speed = 5;
+let speed = 10;
 let lastPaintTime = 0;
 
 
@@ -31,10 +30,12 @@ function main(ctime){
 function isCollide(snake){
     for(let i = 1; i<snakeArr.length; i++){
         if(snake[i].x === snake[0].x && snake[i].y === snake[0].y){
+            gameOverSound.play();
             return true;
         }
     }    
     if(snake[0].x>=18 || snake[0].x<=0 || snake[0].y>=18 || snake[0].y<=0){
+        gameOverSound.play();
         return true;
     }
     return false;
